@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at right, #0a2cff, #00001a);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Верхня панель */
+.top-bar {
+    height: 80px; /* Трохи збільшив висоту панелі для більшого лого */
+    background: #3b3bbd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-radius: 0 0 25px 25px;
+}
+
+/* Секція логотипа (те, що було обведено чорним) */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.logo-text {
+    font-size: 30px; /* Збільшений розмір тексту */
+    font-weight: bold;
+}
+
+.top-buttons button {
+    width: 90px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    background: #1c1cff;
+    margin-left: 15px;
+}
+
+/* Головний блок */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    align-items: flex-start; /* Вирівнювання по верхньому краю */
+}
+
+.left {
+    width: 45%;
+}
+
+.card {
+    background: #1a1acc;
+    padding: 40px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.main-btn {
+    background: #1c1cff;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    /* Додаємо ці два рядки нижче: */
+    text-decoration: none; /* Прибирає підкреслення тексту */
+    display: inline-block; /* Дозволяє посиланню мати відступи як у кнопки */
+}
+
+/* Додамо ефект при наведенні, щоб користувач розумів, що це посилання */
+.main-btn:hover {
+    background: #3535ff;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.right {
+    width: 100%;
+    text-align: right; /* Текст "text 2" тепер зміщено праворуч */
+}
+
+.right p {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+/* Оновлена кнопка у верхній панелі */
+.back-home-btn {
+    background: #1c1cff; /* Такий самий синій */
+    border: none;
+    color: white;
+    padding: 10px 25px; /* Коригуємо внутрішні відступи */
+    border-radius: 30px; /* Круглі краї як у основних кнопок */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 220px;
+    transition: 0.2s; /* Плавність ефекту */
+}
+
+/* Додаємо ефект наведення для кнопки зверху */
+.back-home-btn:hover {
+    background: #3535ff; /* Світліший синій при наведенні */
+    transform: scale(1.05); /* Легке збільшення */
+}
+
+/* Видаляємо старі обмеження розмірів, які заважали кнопці розтягуватися */
+.top-buttons button {
+    /* width: 90px;  <-- це заважало тексту влізати, тепер ширина береться з .back-home-btn */
+    height: auto;
+    border-radius: 30px;
+    border: none;
+    background: transparent; /* Щоб не перекривати основний фон кнопки */
+    margin-left: 15px;
+}
+.subtitle {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8); /* Напівпрозорий білий */
+    line-height: 1.5;
+}
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    /* 1. Змінюємо хедер */
+    .top-bar {
+        height: auto;
+        flex-direction: column; /* Елементи стають один під одним */
+        padding: 15px;
+        gap: 15px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .logo-section {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo-img {
+        height: 80px; /* Зменшуємо лого для малих екранів */
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .top-buttons {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 2. Адаптуємо головний блок */
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .left {
+        width: 100%; /* Текст розтягується на всю ширину */
+        text-align: center;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    /* 3. Кнопки стають одна під одною */
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-btn {
+        width: 100%; /* Кнопки на весь екран зручніші для пальців */
+        text-align: center;
+    }
+
+    .back-home-btn {
+        min-width: 100%; /* Кнопка в хедері теж на всю ширину */
+    }
+}
