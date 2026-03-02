@@ -13,7 +13,7 @@ body {
 
 /* Верхня панель */
 .top-bar {
-    height: 80px; /* Трохи збільшив висоту панелі для більшого лого */
+    height: 80px;
     background: #3b3bbd;
     display: flex;
     align-items: center;
@@ -21,8 +21,7 @@ body {
     padding: 0 25px;
     border-radius: 0 0 25px 25px;
 }
-
-/* Секція логотипа (те, що було обведено чорним) */
+
 .logo-section {
     display: flex;
     align-items: center;
@@ -36,7 +35,7 @@ body {
 }
 
 .logo-text {
-    font-size: 30px; /* Збільшений розмір тексту */
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -49,12 +48,11 @@ body {
     margin-left: 15px;
 }
 
-/* Головний блок */
 .hero {
     display: flex;
     justify-content: space-between;
     padding: 60px;
-    align-items: flex-start; /* Вирівнювання по верхньому краю */
+    align-items: flex-start;
 }
 
 .left {
@@ -82,11 +80,10 @@ body {
     cursor: pointer;
     font-weight: bold;
     /* Додаємо ці два рядки нижче: */
-    text-decoration: none; /* Прибирає підкреслення тексту */
-    display: inline-block; /* Дозволяє посиланню мати відступи як у кнопки */
+    text-decoration: none;
+    display: inline-block;
 }
 
-/* Додамо ефект при наведенні, щоб користувач розумів, що це посилання */
 .main-btn:hover {
     background: #3535ff;
     transform: scale(1.05);
@@ -95,28 +92,28 @@ body {
 
 .right {
     width: 100%;
-    text-align: right; /* Текст "text 2" тепер зміщено праворуч */
+    text-align: right;
 }
 
 .right p {
     font-size: 1.5rem;
     opacity: 0.8;
 }
-/* Оновлена кнопка у верхній панелі */
+
 .back-home-btn {
-    background: #1c1cff; /* Такий самий синій */
+    background: #1c1cff;
     border: none;
     color: white;
-    padding: 10px 25px; /* Коригуємо внутрішні відступи */
-    border-radius: 30px; /* Круглі краї як у основних кнопок */
+    padding: 10px 25px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
     min-width: 220px;
-    transition: 0.2s; /* Плавність ефекту */
+    transition: 0.2s;
 }
 
-/* Додаємо ефект наведення для кнопки зверху */
+
 .back-home-btn:hover {
     background: #3535ff; /* Світліший синій при наведенні */
     transform: scale(1.05); /* Легке збільшення */
